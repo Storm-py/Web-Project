@@ -1,0 +1,672 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700&display=swap');
+
+:root {
+    --red: #E50914;
+    --black: #000000;
+    --light-color: black;
+    --box-shadow: 0 .5rem 1.5rem rgba(0, 0, 0, .1);
+    --card-width: 200px;
+	--card-height: 300px;
+	--card-transition-duration: 800ms;
+	--card-transition-easing: ease;
+}
+
+
+* {
+    font-family: 'Nunito', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none;
+    border: none;
+    text-transform: capitalize;
+    transition: all .2s linear;
+    color: white;
+}
+
+
+/* curser stars here  */
+.cursor {
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    background-color: red;
+    position: fixed;
+    /* z-index: -1; */
+    transition: all linear 0.15s;
+}
+
+.blur {
+    height: 400px;
+    width: 400px;
+    border-radius: 50%;
+    background-color: rgba(255, 0, 0, 0.445);
+    position: fixed;
+    filter: blur(50px);
+    /* z-index: -1; */
+    transition: all linear 0.4s;
+
+}
+
+body {
+    background-color: var(--light-color);
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-padding-top: 5.5rem;
+}
+
+section {
+    padding: 2rem 9%;
+}
+
+section:nth-child(even) {
+    background: var(--light-color);
+}
+
+header {
+    top: 1.5vh;
+    left: 0;
+    right: 0;
+    padding: 1rem 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 10000;
+    position: relative;
+    /* opacity: 0; */
+    padding-bottom: 2.2vh;
+}
+
+.heading {
+    text-align: center;
+    color: var(--red);
+    margin-bottom: 3rem;
+    font-size: 4rem;
+}
+
+.btn {
+    margin-top: 1rem;
+    display: inline-block;
+    font-size: 1.7rem;
+    color: #fff;
+    background: var(--red);
+    border-radius: .5rem;
+    cursor: pointer;
+    padding: .8rem 3rem;
+}
+
+.btn:hover {
+    background: var(--black);
+    color: var(--red);
+    letter-spacing: .1rem;
+}
+
+header .logo {
+    color: #fff;
+    ;
+    font-size: 2.5rem;
+    font-weight: bolder;
+}
+
+header .logo i {
+    color: var(--red);
+
+}
+
+header .navbar a {
+    font-size: 1.7rem;
+    border-radius: .5rem;
+    padding: .5rem 1.5rem;
+    color: #fff;
+}
+
+header .navbar a.active,
+header .navbar a:hover {
+    color: #fff;
+    background: var(--red);
+}
+
+header .icons i,
+header .icons a {
+    cursor: pointer;
+    margin-left: .5rem;
+    height: 4.5rem;
+    line-height: 4.5rem;
+    width: 4.5rem;
+    text-align: center;
+    font-size: 1.7rem;
+    color: #fff;
+    border-radius: 50%;
+    background: var(--red);
+}
+
+header .icons i:hover,
+header .icons a:hover {
+    color: var(--red);
+    background: #fff;
+    transform: rotate(360deg);
+}
+
+header .icons #menu-bars {
+    display: none;
+}
+
+.left img {
+    position: absolute;
+    width: 14vw;
+    height: auto;
+    top: -100%;
+    left: 1vw;
+}
+
+.popular {
+    text-align: center;
+    margin-bottom: 2vh;
+    /* opacity: 0; */
+    height: 10vh;
+    width: 100%;
+    background-color: rgba(169, 169, 169, 0.178);
+}
+
+.popular h2 {
+    font-size: 4vw;
+    color: var(--red);
+    font-weight: bolder;
+}
+
+.vid {
+    position: absolute;
+    z-index: 100000000;
+}
+
+.ab img {
+    position: absolute;
+    z-index: -11111111111;
+    height: 10vw;
+    width: 10vw;
+    rotate: 90deg;
+    bottom: 0;
+    left: 3.8vw;
+}
+
+.ab2 img {
+    position: absolute;
+    z-index: -11111111111;
+    height: 10vw;
+    width: 10vw;
+    rotate: 270deg;
+    top: 19vh;
+    right: 3vw;
+}
+
+.main {
+    position: relative;
+    height: 80vh;
+    width: 80vw;
+    margin: auto 10vw;
+}
+
+.top {
+    pointer-events: none;
+    position: absolute;
+    height: 80vh;
+    width: 80vw;
+    top: 0%;
+    left: 0%;
+    background-color: rgba(0, 0, 0, 0.281);
+}
+
+.back {
+    position: absolute;
+    height: 80vh;
+    width: 80vw;
+    overflow: hidden;
+}
+.workingArea {
+    width: 100%;
+    height: 80vh;
+    position: relative;
+}
+
+.hero {
+    position: absolute;
+    top: 50%;
+    left: 0%;
+    width: 100%;
+}
+
+.elem {
+    height: 7vw;
+    overflow: hidden;
+    padding-left: 20px;
+    position: relative;
+    width: 70%;
+}
+
+.elem h1:nth-child(1) {
+    top: 0;
+    left: 1vw;
+}
+
+#chan h1:nth-child(1) {
+    top: 0;
+    left: 1vw;
+}
+
+.elem h1:nth-child(2) {
+    left: 1vw;
+}
+
+.elem h1:nth-child(3) {
+    left: 1vw;
+}
+
+.elem h1:nth-child(4) {
+    left: 1vw;
+}
+
+.elem h1:nth-child(5) {
+    left: 1vw;
+}
+
+#chan h1:nth-child(2) {
+    left: 1vw;
+}
+
+#chan h1:nth-child(3) {
+    left: 1vw;
+}
+
+#chan h1:nth-child(4) {
+    left: 1vw;
+}
+
+#chan h1:nth-child(5) {
+    left: 1vw;
+}
+
+.elem h1 {
+    top: 100%;
+    left: 0;
+    font-size: 5.0vw;
+    font-weight: bolder;
+    text-transform: uppercase;
+    position: absolute;
+    color: white;
+}
+
+.but button {
+    pointer-events: all;
+    height: 6vw;
+    width: 20vw;
+    background-color: rgb(187, 14, 14);
+    font-size: 3vw;
+    font-weight: 900;
+    border-radius: 0.75vw;
+    border: 2px solid white;
+    position: absolute;
+    bottom: 1vh;
+    left: 1vw;
+}
+
+#chan h1 {
+    top: 100%;
+    left: 0;
+    position: absolute;
+    line-height: 45px;
+    font-weight: 400;
+    font-size: 1.1vw;
+}
+/* page 2 starts here  */
+.page2{
+    height: 100vh;
+    width: 100vw;
+    background-image: linear-gradient(to bottom,var(--black),rgba(255, 0, 0, 0.363));
+}
+button {
+	border: none;
+	background: none;
+	cursor: pointer;
+}
+button:focus {
+	outline: none;
+	border: none;
+}
+.app {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.app__bg {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	z-index: -5;
+	filter: blur(8px);
+	pointer-events: none;
+	user-select: none;
+	overflow: hidden;
+}
+.app__bg::before {
+	content: '';
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background: #000;
+	z-index: 1;
+	opacity: 0.8;
+}
+.app__bg__image {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%) translatex(var(--image-translate-offset, 0));
+	width: 180%;
+	height: 180%;
+	transition: transform 1000ms ease, opacity 1000ms ease;
+	overflow: hidden;
+}
+.app__bg__image img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+.app__bg__image.current--image {
+	opacity: 1;
+	--image-translate-offset: 0;
+}
+.app__bg__image.previous--image, .app__bg__image.next--image {
+	opacity: 0;
+}
+.app__bg__image.previous--image {
+	--image-translate-offset: -25%;
+}
+.app__bg__image.next--image {
+	--image-translate-offset: 25%;
+}
+.cardList {
+	position: absolute;
+	width: calc(3 * var(--card-width));
+	height: auto;
+}
+.cardList__btn {
+	--btn-size: 35px;
+	width: var(--btn-size);
+	height: var(--btn-size);
+	position: absolute;
+	top: 50%;
+	transform: translatey(-50%);
+	z-index: 100;
+}
+.cardList__btn.btn--left {
+	left: -5%;
+}
+.cardList__btn.btn--right {
+	right: -5%;
+}
+.cardList__btn .icon {
+	width: 100%;
+	height: 100%;
+}
+.cardList__btn .icon svg {
+	width: 100%;
+	height: 100%;
+}
+.cardList .cards__wrapper {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	perspective: 1000px;
+}
+.card {
+	--card-translateY-offset: 100vh;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%) translatex(var(--card-translateX-offset)) translatey(var(--card-translateY-offset)) rotateY(var(--card-rotation-offset)) scale(var(--card-scale-offset));
+	display: inline-block;
+	width: var(--card-width);
+	height: var(--card-height);
+	transition: transform var(--card-transition-duration) var(--card-transition-easing);
+	user-select: none;
+    border: 2px solid rgba(179, 2, 2, 0.644);
+    overflow: hidden;
+}
+.card::before {
+	content: '';
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background: #000;
+	z-index: 1;
+	transition: opacity var(--card-transition-duration) var(--card-transition-easing);
+	opacity: calc(1 - var(--opacity));
+}
+.card__image {
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+.card__image img:nth-child(1){
+    top: 0%;
+    left: 0%;
+}
+.card__image img {
+    top: 100%;
+	position: absolute;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+.card.current--card {
+	--current-card-rotation-offset: 0;
+	--card-translateX-offset: 0;
+	--card-rotation-offset: var(--current-card-rotation-offset);
+	--card-scale-offset: 1.2;
+	--opacity: 0.8;
+}
+.card.previous--card {
+	--card-translateX-offset: calc(-1 * var(--card-width) * 1.1);
+	--card-rotation-offset: 25deg;
+}
+.card.next--card {
+	--card-translateX-offset: calc(var(--card-width) * 1.1);
+	--card-rotation-offset: -25deg;
+}
+.card.previous--card, .card.next--card {
+	--card-scale-offset: 0.9;
+	--opacity: 0.4;
+}
+.infoList {
+	position: absolute;
+	width: calc(3 * var(--card-width));
+	height: var(--card-height);
+	pointer-events: none;
+}
+.infoList .info__wrapper {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: flex-start;
+	align-items: flex-end;
+	perspective: 1000px;
+}
+.info {
+	margin-bottom: calc(var(--card-height) / 8);
+	margin-left: calc(var(--card-width) / 1.5);
+	transition: transform var(--card-transition-duration) var(--card-transition-easing);
+}
+.info .text {
+	position: relative;
+	font-family: "Montserrat";
+	font-size: calc(var(--card-width) * var(--text-size-offset, 0.2));
+	white-space: nowrap;
+	color: #fff;
+	width: fit-content;
+}
+.info .name, .info .location {
+	text-transform: uppercase;
+}
+.info .location {
+	font-weight: 800;
+}
+.info .location {
+	--mg-left: 40px;
+	--text-size-offset: 0.12;
+	font-weight: 600;
+	margin-left: var(--mg-left);
+	margin-bottom: calc(var(--mg-left) / 2);
+	padding-bottom: 0.8rem;
+}
+.info .location::before, .info .location::after {
+	content: '';
+	position: absolute;
+	background: #fff;
+	left: 0%;
+	transform: translate(calc(-1 * var(--mg-left)), -50%);
+}
+.info .location::before {
+	top: 50%;
+	width: 20px;
+	height: 5px;
+}
+.info .location::after {
+	bottom: 0;
+	width: 60px;
+	height: 2px;
+}
+.info .description {
+	--text-size-offset: 0.065;
+	font-weight: 500;
+}
+.info.current--info {
+	opacity: 1;
+	display: block;
+}
+.info.previous--info, .info.next--info {
+	opacity: 0;
+	display: none;
+}
+.loading__wrapper {
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	background: #000;
+	z-index: 200;
+}
+.loading__wrapper .loader--text {
+	color: #fff;
+	font-family: "Montserrat";
+	font-weight: 500;
+	margin-bottom: 1.4rem;
+}
+.loading__wrapper .loader {
+	position: relative;
+	width: 200px;
+	height: 2px;
+	background: rgba(255, 255, 255, 0.25);
+}
+.loading__wrapper .loader span {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background: #f00;
+	transform: scalex(0);
+	transform-origin: left;
+}
+.mainch{
+    position: absolute;
+    top: 109%;
+    height: 12vh;
+    width: 100vw;
+    background-color: rgba(116, 0, 0, 0.548);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.mainch h1{
+    font-size: 10vh;
+    font-weight: bolder;
+    color: rgb(150, 150, 150);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+@keyframes scroll {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+.scroller {
+    white-space: nowrap;
+    position: absolute;
+    z-index: 10;
+    top: 175%;
+}
+
+.scroller-in {
+    display: inline-block;
+    white-space: nowrap;
+    animation-name: scroll;
+    animation-duration: 26s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    text-transform: uppercase;
+}
+
+.scroller h4 {
+    display: inline-block;
+    font-size: 140px;
+    font-weight: 900;
+    margin-right: 30px;
+    -webkit-text-stroke: 2px #FF9674;
+    color: transparent;
+}
+
+.scroller h4:hover {
+    color: #FF9674;
+}
+/* page3 starts here */
+.page3{
+    height: 100vh;
+    width: 100vw;
+    background-image: linear-gradient(to bottom,rgba(255, 0, 0, 0.363),black);
+}
+.action{
+    height: 13vh;
+    width: 100vw;
+    background-color: rgba(56, 56, 56, 0.527);
+    position: absolute;
+    top: 204%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.action h1{
+    font-size: 10vh;
+    color: #FF9674;
+}

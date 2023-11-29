@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anime Hub</title>
+    <link rel="stylesheet" href="https://unpkg.com/sheryjs/dist/Shery.css" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+</head>
+
+<body>
+    <div class="cursor"></div>
+    <div class="blur"></div>
+    <!-- <div class="vid"><video autoplay muted src="Img/mahito.mp4"></video></div> -->
+    <header>
+        <div class="left"><img src="Img/logo.png" alt="">
+        </div>
+        <nav class="navbar">
+            <a href="index.html">home</a>
+            <a href="#anime">popular</a>
+            <a href="#action">action</a>
+            <a href="#child">child</a>
+            <a href="#family">family</a>
+        </nav>
+        <div class="icons">
+            <i class="fas fa-bars" id="menu-bars"></i>
+            <i class="fas fa-search" id="search-icon"></i>
+            <a href="#" class="fas fa-heart"></a>
+        </div>
+    </header>
+    <main>
+        <div class="page1">
+            <div class="popular">
+                <h2>Popular Anime &nbsp;&nbsp;&nbsp;&nbsp;</h2>
+            </div>
+            <div class="ab"><img src="Img/rerd.png" alt=""></div>
+            <div class="ab2"><img src="Img/rerd.png" alt=""></div>
+            <div class="main">
+                <div class="top">
+                    <div class="workingArea">
+                        <div class="but"><button>Watch Now</button></div>
+                        <div class="hero">
+                            <div class="herol">
+                                <div class="elem">
+                                    <h1>Jujutsu Kaisen</h1>
+                                    <h1>Demon SLayer</h1>
+                                    <h1>Gintama</h1>
+                                    <h1>Dragon Ball Super</h1>
+                                    <h1>Attack On Titan</h1>
+                                </div>
+                                <div class="elem" id="chan">
+                                    <h1>"Jujutsu Kaisen" is an exciting anime centered on Yuji Itadori, a high school
+                                        student drawn into the world of curses and sorcery. He joins a group of Jujutsu
+                                        sorcerers to combat powerful curses, blending intense battles with supernatural
+                                        elements.</h1>
+                                    <h1>
+                                        "Demon Slayer" is a popular anime that follows the story of Tanjiro Kamado, a
+                                        young
+                                        boy turned demon slayer, as he seeks to avenge his family and save his
+                                        demon-turned
+                                        sister, Nezuko</h1>
+                                    <h1>"Gintama" is a unique anime blending humor and action, featuring Gintoki Sakata
+                                        and
+                                        his odd jobs crew navigating a world invaded by aliens. It's known for its
+                                        hilarious
+                                        parodies, memorable characters, and unexpected emotional moments.</h1>
+                                    <h1>"Dragon Ball" is a classic anime that chronicles the adventures of Goku and his
+                                        friends as they embark on epic journeys, battle powerful foes, and seek the
+                                        magical
+                                        Dragon Balls to fulfill their quests.</h1>
+                                    <h1>"Attack on Titan" is a gripping anime that unfolds in a world where giant
+                                        humanoid
+                                        creatures threaten humanity's existence. Eren Yeager, along with his friends,
+                                        battles these Titans while uncovering dark secrets about their world.</h1>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="back">
+                    <img src="Img/sukuna1.jpeg" alt="">
+                    <img src="Img/ds.jpg" alt="">
+                    <img src="Img/gin.png" alt="">
+                    <img src="Img/chk.jpg" alt="">
+                    <img src="Img/aot.jpg" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="page2">
+            <div class="mainch">
+                <h1>main characters</h1>
+            </div>
+            <div class="app">
+                <div class="cardList">
+                    <button class="cardList__btn btn btn--left">
+                        <div class="icon">
+                            <svg>
+                                <use xlink:href="#arrow-left"></use>
+                            </svg>
+                        </div>
+                    </button>
+                    <div class="cards__wrapper">
+                        <div class="card current--card">
+                            <div class="card__image">
+                                <img src="Img/gojo.jpeg" alt="">
+                                <img src="Img/tanjiro.jpeg" alt="">
+                                <img src="Img/gin1.jpeg" alt="">
+                                <img src="Img/goku.jpeg" alt="">
+                                <img src="Img/eren.jpeg" alt="">
+                            </div>
+                        </div>
+                        <div class="card next--card">
+                            <div class="card__image">
+                                <img src="Img/sukuna.jpeg" alt="">
+                                <img src="Img/muzan.jpeg" alt="">
+                                <img src="Img/gin2.jpeg" alt="">
+                                <img src="Img/vegeta.jpeg" alt="">
+                                <img src="Img/mikasa.jpeg" alt="">
+                            </div>
+                        </div>
+                        <div class="card previous--card">
+                            <div class="card__image">
+                                <img src="Img/itadori.jpeg" alt="">
+                                <img src="Img/nezuko.jpeg" alt="">
+                                <img src="Img/gin3.jpeg" alt="">
+                                <img src="Img/beerus.jpg" alt="">
+                                <img src="Img/levi ackerman.jpeg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <button class="cardList__btn btn btn--right">
+                        <div class="icon">
+                            <svg>
+                                <use xlink:href="#arrow-right"></use>
+                            </svg>
+                        </div>
+                    </button>
+                </div>
+                <div class="infoList">
+                    <div class="info__wrapper">
+                        <div class="info current--info">
+                            <div class="min">
+                                <h1 class="text name" onclick="toggleText()" id="toggleText">Gojo</h1>
+                                <h4 class="text location" onclick="moggleText()" id="moggleText">Strongest Sorceror</h4>
+                                <p class="text description" onclick="joggleText()" id="joggleText">Wanna Fight Gojo?</p>
+                            </div>
+                        </div>
+                        <div class="info next--info">
+                            <div class="min">
+                                <h1 class="text name" onclick="aoggleText()" id="aoggleText">BadAss Sukuna</h1>
+                                <h4 class="text location" onclick="boggleText()" id="boggleText">King Of Curses</h4>
+                                <p class="text description" onclick="coggleText()" id="coggleText">This Guy Really Tells
+                                    You The Real Meaning Of BadAss</p>
+                            </div>
+                        </div>
+                        <div class="info previous--info">
+                            <div class="min">
+                                <h1 class="text name" onclick="doggleText()" id="doggleText">Itadori</h1>
+                                <h4 class="text location" onclick="eoggleText()" id="eoggleText">Sukuna's Vessel</h4>
+                                <p class="text description" onclick="foggleText()" id="foggleText">He May Look Weak But
+                                    Beaware of his power</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="app__bg">
+                    <div class="app__bg__image current--image">
+                        <!-- <img src="gojo.jpeg" alt=""> -->
+                    </div>
+                    <div class="app__bg__image next--image">
+                        <!-- <img src="sukuna.jpeg" alt=""> -->
+                    </div>
+                    <div class="app__bg__image previous--image">
+                        <!-- <img src="itadori.jpeg" alt=""> -->
+                    </div>
+                </div>
+            </div>
+            <div class="loading__wrapper">
+                <div class="loader--text">Loading...</div>
+                <div class="loader">
+                    <span></span>
+                </div>
+            </div>
+            <svg class="icons" style="display: none;">
+                <symbol id="arrow-left" xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'>
+                    <polyline points='328 112 184 256 328 400'
+                        style='fill:none;stroke:#fff;stroke-linecap:round;stroke-linejoin:round;stroke-width:48px' />
+                </symbol>
+                <symbol id="arrow-right" xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'>
+                    <polyline points='184 112 328 256 184 400'
+                        style='fill:none;stroke:#fff;stroke-linecap:round;stroke-linejoin:round;stroke-width:48px' />
+                </symbol>
+            </svg>
+            <div class="scroller">
+                <div class="scroller-in">
+                    <h4>Home</h4>
+                    <h4>Popular</h4>
+                    <h4>Action</h4>
+                    <h4>child</h4>
+                    <h4>family</h4>
+                </div>
+                <div class="scroller-in">
+                    <h4>Home</h4>
+                    <h4>Popular</h4>
+                    <h4>Action</h4>
+                    <h4>child</h4>
+                    <h4>family</h4>
+                </div>
+            </div>
+        </div>
+        <div class="page3">
+            <div class="action">
+                <h1>action</h1>
+            </div>
+        </div>
+    </main>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/0.155.0/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/automat/controlkit.js@master/bin/controlKit.min.js"></script>
+    <script type="text/javascript" src="https://unpkg.com/sheryjs/dist/Shery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.1/vanilla-tilt.min.js"
+        integrity="sha512-wC/cunGGDjXSl9OHUH0RuqSyW4YNLlsPwhcLxwWW1CR4OeC2E1xpcdZz2DeQkEmums41laI+eGMw95IJ15SS3g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://unpkg.com/imagesloaded@5/imagesloaded.pkgd.min.js"></script>
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
